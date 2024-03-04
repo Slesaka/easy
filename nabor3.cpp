@@ -8,7 +8,7 @@ int itc_sqrt(int num){
     if (num <= 0){
         return -1;
     }
-    int kv = 1;
+    long long kv = 1;
     while (kv * kv < num){
             kv++;
     }
