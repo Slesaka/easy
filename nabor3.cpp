@@ -32,7 +32,7 @@ int itc_spr(int a, int b){
     return a * b;
 }
 double itc_str(int a, int b, int c) {
-  if (a + b <= c || a + c <= b || b + c <= a) {
+  if (a + b < c || a + c < b || b + c < a) {
     return -1;
   }
   int p = (a + b + c) / 2;
