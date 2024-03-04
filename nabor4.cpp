@@ -11,7 +11,7 @@ double itc_pow(int num, int step){
     }
     return num2;*/
     if (step == 0){
-        return 0;
+        return 1;
     }
     if (step < 0){
         return -1;
