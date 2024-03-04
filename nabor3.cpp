@@ -5,7 +5,10 @@ using namespace std;
 
 
 int itc_sqrt(int num){
-    if (num <= 0){
+    if (num == 0){
+        return 0;
+    }
+    if (num < 0){
         return -1;
     }
     long long kv = 1;
