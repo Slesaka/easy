@@ -13,10 +13,14 @@ double itc_pow(int num, int step){
     if (step == 0){
         return 1;
     }
-    if (step < 0){
-        return -1;
-    }
     int num2 = num;
+    if (step < 0){
+        for (int i = 0; i < -step - 1; i++){
+            num2 *= num;
+
+        }
+        return 1.0 / num2;
+    }
     for (int i = 0; i < step - 1; i++){
         num2 *= num;
     }
