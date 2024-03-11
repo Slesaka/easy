@@ -38,8 +38,10 @@ int itc_str(int a, int b, int c){
     if ((a > b) && (a > c) && b + c <= a || (b > c) && (b > a) && a + c <= b || (c > a) && (c > b) && a + b <= c){
         return -1;
     }
-    int p = (a + b + c) / 2;
-    return itc_sqrt(p * ((p - a) * (p - b) * (p - c)));
+    if ((a > b) && (a > c) && b + c > a || (b > c) && (b > a) && a + c > b || (c > a) && (c > b) && a + b > c){
+        int p = (a + b + c) / 2;
+        return itc_sqrt(p * ((p - a) * (p - b) * (p - c)));
+    }
 }
 double itc_scir(int radius){
     if (radius < 0){
