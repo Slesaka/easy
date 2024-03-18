@@ -12,10 +12,11 @@ int itc_sqrt(int num){
     }
     long long kv = 1;
     while (kv * kv < num){
-            kv++;
-    }
-    if (kv * kv == num){
-        return kv;
+        if (kv * kv == num) {
+            return kv; 
+        }
+        kv++;
+    
     }
     return -1;
 }
