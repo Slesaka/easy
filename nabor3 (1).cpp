@@ -31,14 +31,16 @@ int itc_spr(int a, int b){
     }
     return a * b;
 }
-int itc_str(int a, int b, int c){
-    if (((a > 0) && (b > 0) && (c > 0)) && (((a > b) && (a > c)) && (b + c > a)) || (((b > c) && (b > a)) && (a + c > b)) || (((c > a) && (c > b)) && (a + b > c))){
-        int p = (a + b + c) / 2;
-        return itc_sqrt(p * ((p - a) * (p - b) * (p - c)));
-    }
-    else{
+int itc_str(int a, int b, int c) {
+    if (a <= 0 || b <= 0 || c <= 0) {
         return -1;
     }
+    if (a + b <= c || a + c <= b || c + b <= a) {
+        return -1;
+    }
+    int p = (a + b + c) / 2;
+    return itc_sqrt(p * ((p - a) * (p - b) * (p - c)));
+
 }
 double itc_scir(int radius){
     if (radius < 0){
