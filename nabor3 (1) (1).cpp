@@ -39,7 +39,7 @@ int itc_spr(int a, int b){
     return a * b;
 }
 int itc_str(int a, int b, int c) {
-    if (a <= 0 && b <= 0 && c <= 0) {
+    if (a <= 0 || b <= 0 || c <= 0) {
         return -1;
     }
     if (a + b <= c && a + c <= b && c + b <= a) {
