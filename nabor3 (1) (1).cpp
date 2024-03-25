@@ -42,7 +42,7 @@ int itc_str(int a, int b, int c) {
     if (a <= 0 || b <= 0 || c <= 0) {
         return -1;
     }
-    if (a + b <= c && a + c <= b && c + b <= a) {
+    if (a + b <= c || a + c <= b || c + b <= a) {
         return -1;
     }
     double p = (a + b + c) / 2.0;
